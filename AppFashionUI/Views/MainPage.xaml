@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="AppFashionUI.Views.MainPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,Auto">
+            <!-- Imagen principal-->
+            <Image Grid.Row="0"
+                   Source="Model.png"
+                   Aspect="AspectFill"/>
+            
+            <!-- Descripción -->
+            <Frame Grid.Row="1" CornerRadius="30" Margin="0,-40,0,25">
+                <Grid RowDefinitions="Auto,Auto,*">
+                    <BoxView Grid.Row="0"
+                             BackgroundColor="#fe5674"
+                             HorizontalOptions="End"
+                             Rotation="-3"
+                             VerticalOptions="Start"
+                             WidthRequest="80"
+                             Margin="0,-8,100,0"/>
+                    <!-- Título -->
+                    <Label Grid.Row="0" FontAttributes="Bold" 
+                           VerticalOptions="Start"
+                           HorizontalTextAlignment="Center"
+                           FontSize="20"
+                           LineHeight="1.5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Find the best "/>
+                                <Span Text=" Fashion " TextColor="White"/>
+                                <Span Text="&#10; Style For You"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <!-- Descripción -->
+                    <Label Grid.Row="1"
+                           Text="Platform that provides many kinds of the best and most trusted Fashion Styles"
+                           FontAttributes="Bold"
+                           FontSize="15"
+                           LineHeight="1.4"
+                           Margin="30,0"
+                           HorizontalTextAlignment="Center"/>
+                    <!-- Boton Redondo -->
+                    <Button Grid.Row="2"
+                            BackgroundColor="#fe5674"
+                            CornerRadius="35"
+                            HeightRequest="70"
+                            WidthRequest="70"
+                            ImageSource="Arrow.png"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="0,20,0,20"/>
+
+                </Grid>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

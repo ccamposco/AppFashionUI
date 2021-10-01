@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFashionUI.Views.PopularFashionPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <!-- Página Principal-->
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="*,Auto"
+                  VerticalOptions="StartAndExpand" 
+                  Padding="30,60,30,15">
+             <!-- Header -->
+                <Grid Grid.Row="0"
+                      Grid.ColumnSpan="2"
+                      RowDefinitions="Auto,Auto"
+                      ColumnDefinitions="Auto,*">
+                    <!--imagen de perfil-->
+                    <ImageButton Grid.Column="0"
+                                 Grid.RowSpan="2"
+                                 Source="Women.png"
+                                 HeightRequest="50"
+                                 WidthRequest="50"
+                                 HorizontalOptions="Start"
+                                 BackgroundColor="White"
+                                 CornerRadius="10"/>
+                    
+                    <!-- Welcome y Nombre-->
+                    <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Text="Welcome"
+                           FontAttributes="Bold"
+                           Margin="20,0,0,0"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="Maria Putri"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Margin="20,0,0,0"/>
+                    
+                    <!-- Imagen Bell-->
+                    <Image Grid.Column="2"
+                           Grid.Row="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="End"
+                           Source="Bell.png"
+                           TranslationX="-20"
+                           TranslationY="-20"/>
+                </Grid>
+                <!-- search y Boton de Acción-->
+                <SearchBar Grid.Column="0"
+                           Grid.Row="1"
+                           BackgroundColor="Transparent"/>
+                <Button  Grid.Column="1"
+                         Grid.Row="1"
+                         BackgroundColor="#fe5674"
+                         CornerRadius="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="End"
+                         WidthRequest="50"
+                         ImageSource="List.png"/>
+                
+                <!-- Popular -->
+                <Label Grid.Column="0"
+                       Grid.Row="2"
+                       Text="Popular Fashion"
+                       FontSize="20"
+                       FontAttributes="Bold"/>
+                <Label Grid.Column="1"
+                       Grid.Row="2"
+                       Text="View All"
+                       HorizontalTextAlignment="End"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"/>
+
+                <CollectionView >
+                    
+                </CollectionView>
+                
+                <!-- Recommended -->
+
+                <CollectionView>
+                    
+                </CollectionView>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
